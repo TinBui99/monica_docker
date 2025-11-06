@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  monica:
+    build: .
+    container_name: monica_app
+    ports:
+      - "8080:80"
+    env_file:
+      - .env
+    volumes:
+      - ./code:/var/www/html
+    restart: unless-stopped
+    entrypoint: >
+      sh -c "
+        echo '⚙️  Setting permissions...' &&
+        chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache &&
+        chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache &&
+        if [ ! -f /var/www/html/.env ]; then
+          echo '📦 Copying Monica source code to host...';
+          cp -r /init-copy/* /var/www/html/;
+        fi &&
+        if [ ! -f /var/www/html/.env ]; then
+          cp /init-copy/.env.example /var/www/html/.env;
+        fi &&
+        echo '🚀 Starting Apache...' &&
+        apache2-foreground"

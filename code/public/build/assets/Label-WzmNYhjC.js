@@ -1,0 +1,1 @@
+import{h as e,o as t,t as o,A as n}from"./app-CapNgXf-.js";const l={class:"block text-sm font-medium text-gray-700 dark:text-gray-300"},r={key:0},c={key:1},m={__name:"Label",props:{value:String},setup(a){return(s,_)=>(t(),e("label",l,[a.value?(t(),e("span",r,o(a.value),1)):(t(),e("span",c,[n(s.$slots,"default")]))]))}};export{m as _};

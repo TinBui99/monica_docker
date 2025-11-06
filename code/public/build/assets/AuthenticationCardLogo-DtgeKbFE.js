@@ -1,0 +1,1 @@
+import{c as e,o as a,w as t,a as o,b as s,u as r,l as c}from"./app-CapNgXf-.js";import{A as n}from"./ApplicationLogo-Dss_iDve.js";const _={class:"flex items-center"},d={__name:"AuthenticationCardLogo",setup(i){return(l,p)=>(a(),e(r(c),{href:"/"},{default:t(()=>[o("div",_,[s(n)])]),_:1}))}};export{d as _};

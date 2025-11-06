@@ -1,0 +1,6 @@
+import{s as n,E as l,h as p,i,o as c,b as r,w as u,u as a,J as h}from"./app-CapNgXf-.js";import{c as m}from"./createLucideIcon-jKXsEGte.js";import{A as d}from"./index-C2abvfVx.js";/**
+ * @license lucide-vue-next v0.539.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const f=m("message-circle-question-mark",[["path",{d:"M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719",key:"1sd12s"}],["path",{d:"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3",key:"1u773s"}],["path",{d:"M12 17h.01",key:"p32p05"}]]),g=["href"],x={__name:"Help",props:{url:String,top:{type:String,default:"3px"}},setup(e){const o=e,s=n(()=>l().props.help_url+o.url);return(t,k)=>t.$page.props.auth.user?.help_shown?(c(),p("a",{key:0,class:"relative inline cursor-pointer",href:s.value,style:h("top:"+e.top),target:"_blank",lang:"en",rel:"noopener noreferrer"},[r(a(d),{placement:"topLeft",title:t.$t("This link will open in a new tab"),"arrow-point-at-center":""},{default:u(()=>[r(a(f),{class:"h-4 w-4 text-gray-400 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-600"})]),_:1},8,["title"])],12,g)):i("",!0)}};export{x as _};

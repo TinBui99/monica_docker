@@ -1,0 +1,30 @@
+parameters:
+    paths:
+        - app
+        - database/factories
+        - database/seeders
+        - routes
+
+    inferPrivatePropertyTypeFromConstructor: true
+    treatPhpDocTypesAsCertain: false
+
+    excludePaths:
+        - */app/Domains/Vault/ManageCalendar/Web/ViewHelpers/VaultCalendarIndexViewHelper.php
+        - */app/Domains/Contact/DavClient/Services/Utils/Dav/ServiceUrlQuery.php
+        - */app/Models/Contact.php
+
+        # phpstan false positive
+        - */app/Mail/UserNotificationChannelEmailCreated.php
+
+    level: 5
+    ignoreErrors:
+        # Global ignore of the "Access to an undefined property"
+        - '#Access to an undefined property .*\.#'
+
+        # phpstan false positive
+        - path: */app/Helpers/helpers.php
+          message: '#Function readVersion\(\) never returns null so it can be removed from the return type\.#'
+        - path: */app/Mail/UserInvited.php
+          message: '#Variable \$url might not be defined\.#'
+        - path: */app/Mail/UserInvited.php
+          message: '#Variable \$userName might not be defined\.#'
