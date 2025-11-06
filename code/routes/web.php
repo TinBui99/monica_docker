@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @see https://laravel.com/docs/8.x/routing
+ */
 use App\Domains\Contact\ManageAvatar\Web\Controllers\ModuleAvatarController;
 use App\Domains\Contact\ManageCalls\Web\Controllers\ContactModuleCallController;
 use App\Domains\Contact\ManageContact\Web\Controllers\ContactArchiveController;
